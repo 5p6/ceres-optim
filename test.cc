@@ -114,6 +114,7 @@ int main(int argc, char* argv[]){
   }
   ceres::Solver::Options options;
   options.linear_solver_type = ceres::DENSE_QR;
+  options.max_num_iterations = 100;
   options.minimizer_progress_to_stdout = true;
 
   ceres::Solver::Summary summary;
